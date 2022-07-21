@@ -11,6 +11,11 @@
 		8428244A28896E8800F43259 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428244928896E8800F43259 /* ContentView.swift */; };
 		8428244C28896E8A00F43259 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8428244B28896E8A00F43259 /* Assets.xcassets */; };
 		8428244F28896E8A00F43259 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8428244E28896E8A00F43259 /* Preview Assets.xcassets */; };
+		8428245928896F3200F43259 /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428245828896F3200F43259 /* PokemonCell.swift */; };
+		8428245B2889728400F43259 /* PokedexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428245A2889728400F43259 /* PokedexView.swift */; };
+		8428245D288974C400F43259 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428245C288974C400F43259 /* Pokemon.swift */; };
+		8428245F2889789300F43259 /* PokemonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428245E2889789300F43259 /* PokemonViewModel.swift */; };
+		8428246828897F6A00F43259 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8428246728897F6A00F43259 /* KingfisherSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,10 @@
 		8428244928896E8800F43259 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8428244B28896E8A00F43259 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8428244E28896E8A00F43259 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8428245828896F3200F43259 /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
+		8428245A2889728400F43259 /* PokedexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexView.swift; sourceTree = "<group>"; };
+		8428245C288974C400F43259 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		8428245E2889789300F43259 /* PokemonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8428246828897F6A00F43259 /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +61,9 @@
 		8428244628896E8800F43259 /* pokemon */ = {
 			isa = PBXGroup;
 			children = (
+				8428245728896EF500F43259 /* View */,
+				8428245628896EEF00F43259 /* ViewModel */,
+				8428245528896EE500F43259 /* Model */,
 				8428244728896E8800F43259 /* pokemonApp.swift */,
 				8428244928896E8800F43259 /* ContentView.swift */,
 				8428244B28896E8A00F43259 /* Assets.xcassets */,
@@ -65,6 +78,31 @@
 				8428244E28896E8A00F43259 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8428245528896EE500F43259 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8428245C288974C400F43259 /* Pokemon.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8428245628896EEF00F43259 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8428245E2889789300F43259 /* PokemonViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8428245728896EF500F43259 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8428245828896F3200F43259 /* PokemonCell.swift */,
+				8428245A2889728400F43259 /* PokedexView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +121,9 @@
 			dependencies = (
 			);
 			name = pokemon;
+			packageProductDependencies = (
+				8428246728897F6A00F43259 /* KingfisherSwiftUI */,
+			);
 			productName = pokemon;
 			productReference = 8428244428896E8800F43259 /* pokemon.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +152,9 @@
 				Base,
 			);
 			mainGroup = 8428243B28896E8800F43259;
+			packageReferences = (
+				8428246628897F6A00F43259 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 8428244528896E8800F43259 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8428245D288974C400F43259 /* Pokemon.swift in Sources */,
 				8428244A28896E8800F43259 /* ContentView.swift in Sources */,
+				8428245F2889789300F43259 /* PokemonViewModel.swift in Sources */,
 				8428244828896E8800F43259 /* pokemonApp.swift in Sources */,
+				8428245928896F3200F43259 /* PokemonCell.swift in Sources */,
+				8428245B2889728400F43259 /* PokedexView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +387,26 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8428246628897F6A00F43259 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = versionRange;
+				maximumVersion = 6.0.0;
+				minimumVersion = 5.15.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8428246728897F6A00F43259 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8428246628897F6A00F43259 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8428243C28896E8800F43259 /* Project object */;
 }
